@@ -300,6 +300,208 @@
   
 
   <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/工欲善其事必先利其器-vim篇/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.51cto.com/wyfs02/M00/89/6B/wKioL1gSv7HRiOzyAAAj22an3nw405_middle.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/02/14/工欲善其事必先利其器-vim篇/" itemprop="url">
+                  工欲善其事必先利其器-vim篇
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-14T22:15:47+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/14/工欲善其事必先利其器-vim篇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/02/14/工欲善其事必先利其器-vim篇/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/14/工欲善其事必先利其器-vim篇/" class="leancloud_visitors" data-flag-title="工欲善其事必先利其器-vim篇">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: vim使用技巧<br>date: 2017-03-30 21:24:41</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>使用vim大概一年了，下面是一些经常使用的技巧，总结下来，想看的时候随时可以看。</p>
+<h3 id="进入vi的命令"><a href="#进入vi的命令" class="headerlink" title="进入vi的命令"></a>进入vi的命令</h3><blockquote>
+<p>vi filename :打开或新建文件，并将光标置于第一行首<br>vi +n filename ：打开文件，并将光标置于第n行首<br>vi + filename ：打开文件，并将光标置于最后一行首<br>vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处<br>vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename<br>vi filename….filename ：打开多个文件，依次进行编辑   </p>
+</blockquote>
+<h2 id="vim配置"><a href="#vim配置" class="headerlink" title="vim配置"></a>vim配置</h2><blockquote>
+<p>:set number / set nonumber    显示/不显示行号<br>:set ruler /set noruler    显示/不显示标尺<br>:set hlsearch    高亮显示查找到的单词<br>:set nohlsearch    关闭高亮显示<br>:syntax on    语法高亮<br>:set nu    显示行号<br>:set tabstop=8    设置tab大小,8为最常用最普遍的设置<br>:set autoindent    自动缩进<br>:set cindent    C语言格式里面的自动缩进  </p>
+</blockquote>
+<h2 id="vim的三种模式"><a href="#vim的三种模式" class="headerlink" title="vim的三种模式"></a>vim的三种模式</h2><blockquote>
+<ul>
+<li>一般指令模式 （command mode）<br>以 vi 打开一个文件就直接进入一般指令模式了（这是默认的模式，也简称为一般模式）。在这个模式中， 你可以使用“上下左右”按键来移动光标，你可以使用“删除字符”或“删除整列”来处理文件内容， 也可以使用“复制、贴上”来处理你的文件数据。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>编辑模式 （insert mode）<br>在一般指令模式中可以进行删除、复制、贴上等等的动作，但是却无法编辑文件内容的！ 要等到你按下“i, I, o, O, a, A, r, R”等任何一个字母之后才会进入编辑模式。注意了！通常在 Linux 中，按下这些按键时，在画面的左下方会出现“ INSERT 或 REPLACE ”的字样，此时才可以进行编辑。而如果要回到一般指令模式时， 则必须要按下“Esc”这个按键即可退出编辑模式。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>命令行命令模式 （command-line mode）<br>在一般模式当中，输入“ : / ? ”三个中的任何一个按钮，就可以将光标移动到最下面那一列。在这个模式当中， 可以提供你“搜寻数据”的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等等的动作则是在此模式中达成的！</li>
+</ul>
+</blockquote>
+<h3 id="一般指令模式切换到编辑模式的可用的按钮说明"><a href="#一般指令模式切换到编辑模式的可用的按钮说明" class="headerlink" title="一般指令模式切换到编辑模式的可用的按钮说明"></a>一般指令模式切换到编辑模式的可用的按钮说明</h3><blockquote>
+<p>进入插入或取代的编辑模式<br>i, I    进入插入模式（Insert mode）：i 为“从目前光标所在处插入”， I 为“在目前所在列的第一个非空白字符处开始插入”。<br>a, A    进入插入模式（Insert mode）：a 为“从目前光标所在的下一个字符处开始插入”， A 为“从光标所在列的最后一个字符处开始插入”。（常用）<br>o, O    进入插入模式（Insert mode）：这是英文字母 o 的大小写。o 为“在目前光标所在的下一列处插入新的一列”； O 为在目前光标所在处的上一列插入新的一列！（常用）<br>r, R    进入取代模式（Replace mode）：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；（常用）  </p>
+</blockquote>
+<h3 id="一般指令模式切换到命令行界面的可用按钮说明"><a href="#一般指令模式切换到命令行界面的可用按钮说明" class="headerlink" title="一般指令模式切换到命令行界面的可用按钮说明"></a>一般指令模式切换到命令行界面的可用按钮说明</h3><blockquote>
+<p>命令行界面的储存、离开等指令<br>:w    将编辑的数据写入硬盘文件中<br>:w!    若文件属性为“只读”时，强制写入该文件。不过，到底能不能写入，还是跟你对该文件的文件权限有关啊！<br>:q    离开 vi<br>:q!    若曾修改过文件，又不想储存，使用 ! 为强制离开不储存盘案。<br>注意一下啊，那个惊叹号 （!） 在 vi 当中，常常具有“强制”的意思～<br>:wq    储存后离开，若为 :wq! 则为强制储存后离开<br>ZZ    这是大写的 Z 喔！若文件没有更动，则不储存离开，若文件已经被更动过，则储存后离开！<br>:w [filename]    将编辑的数据储存成另一个文件（类似另存新文件）<br>:r [filename]    在编辑的数据中，读入另一个文件的数据。亦即将 “filename” 这个文件内容加到光标所在列后面<br>:n1,n2 w [filename]    将 n1 到 n2 的内容储存成 filename 这个文件。<br>:! command    暂时离开 vi 到命令行界面下执行 command 的显示结果！例如 “:! ls /home”即可在 vi 当中察看 /home 下面以 ls 输出的文件信息！</p>
+</blockquote>
+<h2 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h2><blockquote>
+<p>k nk    上 向上移动n行<br>j nj    下 向下移动n行<br>h nh    左 向左移动n行<br>l nl    右 向右移动n行<br>Space    光标右移一个字符<br>Backspace    光标左移一个字符<br>Enter    光标下移一行<br>w/W    光标右移一个字至字首<br>b/B    光标左移一个字至字首<br>e或E    光标右移一个字至字尾<br>)    光标移至句尾<br>(    光标移至句首<br>}    光标移至段落开头<br>{    光标移至段落结尾<br>n$    光标移至第n行尾<br>H    光标移至屏幕顶行<br>M    光标移至屏幕中间行<br>L    光标移至屏幕最后行<br>0    （注意是数字零）光标移至当前行首<br>^    移动光标到行首第一个非空字符上去<br>$    光标移至当前行尾<br>gg    移到第一行<br>G    移到最后一行<br>f    移动光标到当前行的字符a上<br>F    相反<br>%    移动到与制匹配的括号上去（），{}，[]，&lt;&gt;等<br>nG    移动到第n行上<br>G    到最后一行 </p>
+</blockquote>
+<h2 id="屏幕滚动"><a href="#屏幕滚动" class="headerlink" title="屏幕滚动"></a>屏幕滚动</h2><blockquote>
+<p>Ctrl+u    向文件首翻半屏<br>Ctrl+d    向文件尾翻半屏<br>Ctrl+f    向文件尾翻一屏<br>Ctrl＋b 向文件首翻一屏<br>nz    将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部  </p>
+</blockquote>
+<h2 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h2><blockquote>
+<p>i    在光标前<br>I    在当前行首<br>a    光标后<br>A    在当前行尾<br>o    在当前行之下新开一行<br>O    在当前行之上新开一行<br>r    替换当前字符<br>R    替换当前字符及其后的字符，直至按ESC键<br>s    从当前光标位置处开始，以输入的文本替代指定数目的字符<br>S    删除指定数目的行，并以所输入文本代替之<br>ncw/nCW    修改指定数目的字<br>nCC    修改指定数目的行  </p>
+</blockquote>
+<h2 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h2><blockquote>
+<p>x/X    删除一个字符，x删除光标后的，而X删除光标前的<br>dw    删除一个单词(删除光标位置到下一个单词开始的位置)<br>dnw    删除n个单词<br>d0 删至行首<br>d$    删至行尾<br>dd    删除一行<br>ndd    删除当前行及其后n-1行<br>dnl    向右删除n个字母<br>dnh    向左删除n个字母<br>dnj    向下删除n行,当前行+其上n行<br>dnk    向上删除n行,当期行+其下n行<br>cnw[word]    将n个word改变为word<br>C$    改变到行尾<br>cc    改变整行<br>shift+j    删除行尾的换行符，下一行接上来了  </p>
+</blockquote>
+<h2 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h2><blockquote>
+<p>ynw    复制n个单词<br>yy    复制一行<br>ynl    复制n个字符<br>y$    复制当前光标至行尾处<br>nyy    拷贝n行<br>y0    复制光标所在的那个字符到该列行首的所有数据<br>y$    复制光标所在的那个字符到该列行尾的所有数据<br>p, P 粘贴用x或d删除的文本。p 为将已复制的数据在光标下一列贴上，P 则为贴在光标上一列！ 如果是通过y$复制的，粘贴是在当前光标处，而不是下一行！举例来说，我目前光标在第 20 列，且已经复制了 10 列数据。则按下 p 后，那 10 列数据会贴在原本的 20 列之后，亦即由 21 列开始贴。但如果是按下 P 呢？ 那么原本的第 20 列会被推到变成 30 列。 </p>
+</blockquote>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><blockquote>
+<p>u    撤销前一次的操作<br>shif+u(U)    撤销对该行的所有操作</p>
+</blockquote>
+<h2 id="点命令"><a href="#点命令" class="headerlink" title="点命令"></a>点命令</h2><blockquote>
+<p>. 意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点“.”就好了！  </p>
+</blockquote>
+<h2 id="搜索及替换"><a href="#搜索及替换" class="headerlink" title="搜索及替换"></a>搜索及替换</h2><blockquote>
+<p>/pattern    从光标开始处向文件尾搜索pattern<br>?pattern    从光标开始处向文件首搜索pattern<br>n    在同一方向重复上一次搜索命令<br>N    在反方向上重复上一次搜索命令<br>cw newword    替换为newword<br>n    继续查找<br>:s/p1/p2/g    将当前行中所有p1均用p2替代,g表示执行 用c表示需要确认<br>:n1,n2 s/p1/p2/g    将第n1至n2行中所有p1均用p2替代<br>:%s/p1/p2/g 全局替换<br>:g/p1/s//p2/g    将文件中所有p1均用p2替换<br>:1,$ s/string1/string2/g    在全文中将string1替换string2</p>
+</blockquote>
+<h2 id="区块选择-Visual-Block"><a href="#区块选择-Visual-Block" class="headerlink" title="区块选择(Visual Block)"></a>区块选择(Visual Block)</h2><p>v    字符选择，会将光标经过的地方反白选择！<br>V    列选择，会将光标经过的列反白选择！<br>[Ctrl]+v    区块选择，可以用长方形的方式选择数据。   </p>
+<h3 id="对标记进行动作"><a href="#对标记进行动作" class="headerlink" title="对标记进行动作"></a>对标记进行动作</h3><blockquote>
+<p>1、&gt; 块右移<br>2、&lt; 块左移<br>3、y 复制块 反白的地方复制起来<br>4、d 删除块  将反白的地方删除掉<br>5、p 将刚刚复制的区块，在光标所在处贴上！<br>6、I 会在每一行所选中内容的开始前添加”字符串”</p>
+</blockquote>
+<font color="##FF0000"><strong>就先到这里吧，插件下一篇再介绍。</strong></font>    
+
+
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/2019-first/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -493,7 +695,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
